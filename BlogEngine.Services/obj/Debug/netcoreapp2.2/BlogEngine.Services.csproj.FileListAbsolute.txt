@@ -1,0 +1,9 @@
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Services\bin\Debug\netcoreapp2.2\BlogEngine.Services.deps.json
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Services\bin\Debug\netcoreapp2.2\BlogEngine.Services.dll
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Services\obj\Debug\netcoreapp2.2\BlogEngine.Services.csproj.CoreCompileInputs.cache
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Services\obj\Debug\netcoreapp2.2\BlogEngine.Services.AssemblyInfoInputs.cache
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Services\obj\Debug\netcoreapp2.2\BlogEngine.Services.AssemblyInfo.cs
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Services\bin\Debug\netcoreapp2.2\BlogEngine.Services.pdb
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Services\obj\Debug\netcoreapp2.2\BlogEngine.Services.csprojAssemblyReference.cache
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Services\obj\Debug\netcoreapp2.2\BlogEngine.Services.dll
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Services\obj\Debug\netcoreapp2.2\BlogEngine.Services.pdb

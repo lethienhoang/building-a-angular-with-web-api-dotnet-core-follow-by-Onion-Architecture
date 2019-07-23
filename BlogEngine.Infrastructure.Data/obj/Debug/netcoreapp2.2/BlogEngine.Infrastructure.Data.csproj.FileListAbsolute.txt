@@ -1,0 +1,12 @@
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\bin\Debug\netcoreapp2.2\BlogEngine.Infrastructure.Data.deps.json
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\bin\Debug\netcoreapp2.2\BlogEngine.Infrastructure.Data.dll
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\bin\Debug\netcoreapp2.2\BlogEngine.Infrastructure.Data.pdb
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\obj\Debug\netcoreapp2.2\BlogEngine.Infrastructure.Data.csprojAssemblyReference.cache
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\obj\Debug\netcoreapp2.2\BlogEngine.Infrastructure.Data.csproj.CoreCompileInputs.cache
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\obj\Debug\netcoreapp2.2\BlogEngine.Infrastructure.Data.AssemblyInfoInputs.cache
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\obj\Debug\netcoreapp2.2\BlogEngine.Infrastructure.Data.AssemblyInfo.cs
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\obj\Debug\netcoreapp2.2\BlogEngine.Infrastructure.Data.dll
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\obj\Debug\netcoreapp2.2\BlogEngine.Infrastructure.Data.pdb
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\bin\Debug\netcoreapp2.2\BlogEngine.Core.dll
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\bin\Debug\netcoreapp2.2\BlogEngine.Core.pdb
+D:\Hoang-Projects\NetCores\BlogEngine\BlogEngine.Infrastructure.Data\obj\Debug\netcoreapp2.2\BlogEngine.Infrastructure.Data.csproj.CopyComplete
