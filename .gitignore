@@ -1,7 +1,7 @@
 
-BlogEngine.Core/obj/Debug/
-BlogEngine.Core/bin/Debug/
-BlogEngine.Http.Utilities/bin/Debug/
-BlogEngine.WebApi/bin/Debug/
-BlogEngine.Infrastructure.Data/bin/Debug/
-BlogEngine.Services/bin/Debug/
+BlogEngine.Core/obj/
+BlogEngine.Core/bin/
+BlogEngine.Http.Utilities/bin
+BlogEngine.WebApi/bin/
+BlogEngine.Infrastructure.Data/bin
+BlogEngine.Services/bin/
