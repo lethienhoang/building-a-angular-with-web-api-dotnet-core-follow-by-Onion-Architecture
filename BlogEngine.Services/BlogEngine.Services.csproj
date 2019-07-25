@@ -5,10 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstracts\" />
-    <Folder Include="Implementations\" />
-    <Folder Include="ViewModels\Comments\" />
-    <Folder Include="ViewModels\Categories\" />
+    <Folder Include="Dtos\Comments\" />
+    <Folder Include="Dtos\Categories\" />
+    <Folder Include="Validations\" />
   </ItemGroup>
 
   <ItemGroup>

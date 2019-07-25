@@ -28,6 +28,17 @@ namespace BlogEngine.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            //Set up swapper
+            services.AddSwaggerGen(x =>
+            {
+                x.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
+                {
+                    Version = "v1",
+                    Title = "Web API",
+                    Description = "Blog web api"
+                });
+            });
             
         }
 
@@ -47,7 +58,13 @@ namespace BlogEngine.WebApi
             app.UseHttpsRedirection();
             app.UseMvc();
 
+            // Set up enviroments
             AutoMapperConfig.Configure();
+            app.UseSwagger();
+            app.UseSwaggerUI(x =>
+            {
+                x.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
+            });
         }
     }
 }
