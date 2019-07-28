@@ -1,4 +1,5 @@
 ﻿using BlogEngine.Core.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace BlogEngine.Core.Context
         }
 
         public DbSet<Post> Posts { get; set; }
-        public DbSet<IdentityUser> IdentityUser { get; set; }
+        public DbSet<User> IdentityUser { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Category> Categories { get; set; }
 

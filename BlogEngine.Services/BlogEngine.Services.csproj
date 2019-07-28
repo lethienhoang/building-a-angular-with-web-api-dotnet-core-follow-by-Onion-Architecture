@@ -5,13 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\Comments\" />
-    <Folder Include="Dtos\Categories\" />
     <Folder Include="Validations\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlogEngine.Http.Utilities\BlogEngine.Http.Utilities.csproj" />
+    <ProjectReference Include="..\BlogEngine.Infrastructure.Data\BlogEngine.Infrastructure.Data.csproj" />
   </ItemGroup>
 
 </Project>

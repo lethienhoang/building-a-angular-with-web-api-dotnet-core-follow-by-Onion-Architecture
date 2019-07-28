@@ -64,29 +64,34 @@ namespace BlogEngine.Infrastructure.Data.Infrastructure
             return query.Where(predicate).FirstOrDefault();
         }
 
-        public virtual Task<T> FindByIdAsync(Guid id)
+        public virtual async Task<T> FindByIdAsync(Guid id)
         {
-            return dbset.SingleOrDefaultAsync(x => x.Id == id);
+            return await dbset.SingleOrDefaultAsync(x => x.Id == id);
         }
 
-        public virtual Task<T> GetSingleAsync(Expression<Func<T, bool>> predicate)
+        public virtual async Task<T> GetSingleAsync(Expression<Func<T, bool>> predicate)
         {
-            return dbset.FirstOrDefaultAsync(predicate);
+            return await dbset.FirstOrDefaultAsync(predicate);
         }
 
-        public virtual Task<T> GetSingleAsync(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includeProperties)
+        public virtual async Task<T> GetSingleAsync(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includeProperties)
         {
             IQueryable<T> query = dbset;
             foreach (var includeProperty in includeProperties)
             {
                 query = query.Include(includeProperty);
             }
-            return query.Where(predicate).FirstOrDefaultAsync();
+            return await query.Where(predicate).FirstOrDefaultAsync();
         }
 
         public virtual void Update(T entity)
         {
             dbset.Update(entity);
+        }
+
+        public async Task<bool> AnyAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await dbset.AnyAsync(predicate);
         }
     }
 }

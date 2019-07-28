@@ -18,6 +18,8 @@ namespace BlogEngine.Infrastructure.Data.Abstract
         Task<T> GetSingleAsync(Expression<Func<T, bool>> predicate);
         Task<T> GetSingleAsync(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includeProperties);
 
+        Task<bool> AnyAsync(Expression<Func<T, bool>> predicate);
+
         IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
         void Add(T entity);
         void Update(T entity);

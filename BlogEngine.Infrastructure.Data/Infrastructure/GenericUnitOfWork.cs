@@ -4,6 +4,7 @@ using BlogEngine.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BlogEngine.Infrastructure.Data.Infrastructure
 {
@@ -20,7 +21,7 @@ namespace BlogEngine.Infrastructure.Data.Infrastructure
         private GenericRepository<Post> postRepository;
         private GenericRepository<Category> categoryRepository;
         private GenericRepository<Comment> commentRepository;
-        private GenericRepository<IdentityUser> identityUserRepository;
+        private GenericRepository<User> userRepository;
 
 
 
@@ -38,7 +39,7 @@ namespace BlogEngine.Infrastructure.Data.Infrastructure
         }
 
 
-        GenericRepository<Category> CategoryRepository
+        public GenericRepository<Category> CategoryRepository
         {
             get
             {
@@ -52,7 +53,7 @@ namespace BlogEngine.Infrastructure.Data.Infrastructure
         }
 
 
-        GenericRepository<Comment> CommentRepository
+        public GenericRepository<Comment> CommentRepository
         {
             get
             {
@@ -66,16 +67,16 @@ namespace BlogEngine.Infrastructure.Data.Infrastructure
         }
 
 
-        GenericRepository<IdentityUser> IdentityUserRepository
+        public GenericRepository<User> UserRepository
         {
             get
             {
-                if (identityUserRepository == null)
+                if (userRepository == null)
                 {
-                    identityUserRepository = new GenericRepository<IdentityUser>(context);
+                    userRepository = new GenericRepository<User>(context);
                 }
 
-                return identityUserRepository;
+                return UserRepository;
             }
         }
 
@@ -111,5 +112,12 @@ namespace BlogEngine.Infrastructure.Data.Infrastructure
 
             Dispose();
         }
+
+        public async Task SaveChangesAsync()
+        {
+            await context.SaveChangesAsync();
+            Dispose();
+        }
+
     }
 }

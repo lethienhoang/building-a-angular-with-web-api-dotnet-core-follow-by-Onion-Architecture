@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using BlogEngine.Dtos.Dtos.Accounts;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -41,7 +42,7 @@ namespace BlogEngine.Http.Utilities.Authentication
 
             return principal;
         }
-        public  string GenerateToken(AppUser userInfor)
+        public  string GenerateToken(AccountInforDto userInfor)
         {
 
             if (claims != null)
