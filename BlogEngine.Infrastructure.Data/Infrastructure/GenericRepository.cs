@@ -12,10 +12,10 @@ namespace BlogEngine.Infrastructure.Data.Infrastructure
     public class GenericRepository<T> : IEntityBaseRepository<T> where T : class, IEntityBase, new()
     {
 
-        private Core.Context.DatabaseContext context;
+        private Core.Context.BlogContext context;
         private DbSet<T> dbset;
 
-        public GenericRepository(Core.Context.DatabaseContext context)
+        public GenericRepository(Core.Context.BlogContext context)
         {
             this.context = context;
             dbset = context.Set<T>();

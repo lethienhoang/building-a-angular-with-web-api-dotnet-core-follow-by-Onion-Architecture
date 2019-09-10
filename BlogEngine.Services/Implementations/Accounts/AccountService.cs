@@ -2,6 +2,7 @@
 using BlogEngine.Core;
 using BlogEngine.Dtos.Dtos.Accounts;
 using BlogEngine.Http.Utilities.Hashs;
+using BlogEngine.Infrastructure.Data.Abstracts;
 using BlogEngine.Infrastructure.Data.Infrastructure;
 using BlogEngine.Services.Abstracts.Accounts;
 using System;
@@ -13,10 +14,10 @@ namespace BlogEngine.Services.Implementations
 {
     public class AccountService : IAccountService
     {
-        private readonly GenericUnitOfWork _unitOfWork;
+        private readonly IBaseUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly IPasswordHasher _passwordHasher;
-        public AccountService(GenericUnitOfWork unitOfWork, IPasswordHasher passwordHasher, IMapper mapper)
+        public AccountService(IBaseUnitOfWork unitOfWork, IPasswordHasher passwordHasher, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;

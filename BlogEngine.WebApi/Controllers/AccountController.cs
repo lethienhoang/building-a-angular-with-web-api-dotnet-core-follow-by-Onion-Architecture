@@ -14,21 +14,23 @@ using Microsoft.Extensions.Configuration;
 
 namespace BlogEngine.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/auth")]
     [ApiController]
     public class AccountController : ControllerBase
     {
         private readonly IAccountService _accountService;
         private readonly IPasswordHasher _passwordHasher;
         private AuthenticationHelper authenticationHelper;
-        private readonly IConfiguration _configuration;
-        public AccountController(IAccountService accountService, IPasswordHasher passwordHasher,IConfiguration configuration)
+        public AccountController(IAccountService accountService, IPasswordHasher passwordHasher, IConfiguration configuration)
         {
             _accountService = accountService;
             authenticationHelper = new AuthenticationHelper(configuration);
         }
 
-        public async Task<IActionResult> SignUp(AccountDto model)
+       
+        [HttpPost]
+        [Route("signup")]
+        public async Task<IActionResult> SignUp([FromBody] AccountDto model)
         {
             var user = await _accountService.SignUpAsync(model);
 
@@ -40,8 +42,9 @@ namespace BlogEngine.WebApi.Controllers
             return Ok(user);
         }
 
-
-        public async Task<IActionResult> Login(LoginDto model)
+        [HttpPost]
+        [Route("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto model)
         {
             var user = await _accountService.GetUserAsync(model.Email);
 
@@ -61,6 +64,9 @@ namespace BlogEngine.WebApi.Controllers
                 refreshToken = refreshToken
             });
 
+
+
         }
+
     }
 }

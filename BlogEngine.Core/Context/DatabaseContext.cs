@@ -7,13 +7,14 @@ using System.Text;
 
 namespace BlogEngine.Core.Context
 {
-    public class DatabaseContext : DbContext
+    
+    public class BlogContext : DbContext
     {
-        public DatabaseContext()
+        public BlogContext()
         {
 
         }
-        public DatabaseContext(DbContextOptions options) : base(options)
+        public BlogContext(DbContextOptions options) : base(options)
         {
                 
         }

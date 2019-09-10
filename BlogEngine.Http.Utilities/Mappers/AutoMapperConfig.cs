@@ -5,15 +5,15 @@ using System.Text;
 
 namespace BlogEngine.Http.Utilities.Mappers
 {
-    public static class AutoMapperConfig
+    public static class AutoMapperConfig 
     {
         public static void Configure()
         {
-            Mapper.Initialize(cfg =>
-            {
-                cfg.AddProfile<MappingEntityToViewModel>();
-                cfg.AddProfile<MappingViewModelToEntity>();
-            });
+            //AutoMapper.Mapper.Initialize(cfg =>
+            //{
+            //    cfg.AddProfile<MappingEntityToViewModel>();
+            //    cfg.AddProfile<MappingViewModelToEntity>();
+            //});
            
         }
     }

@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using BlogEngine.Core.Context;
+using BlogEngine.Http.Utilities.Hashs;
 using BlogEngine.Http.Utilities.Mappers;
+using BlogEngine.Infrastructure.Data.Abstracts;
+using BlogEngine.Infrastructure.Data.Infrastructure;
+using BlogEngine.Services.Abstracts.Accounts;
+using BlogEngine.Services.Implementations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -39,7 +46,21 @@ namespace BlogEngine.WebApi
                     Description = "Blog web api"
                 });
             });
-            
+
+            // Autofac
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IPasswordHasher, PasswordHasher>();
+            services.AddScoped<IBaseUnitOfWork, GenericUnitOfWork>();
+
+
+
+            //services.AddAutoMapper();
+            services.AddAutoMapper(typeof(Startup));
+            // Init Database
+            //var connection = Configuration["DataConnection"];
+            services.AddDbContext<BlogContext>
+                (options => options.UseSqlServer(Configuration.GetConnectionString("DataConnection")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,9 +78,8 @@ namespace BlogEngine.WebApi
 
             app.UseHttpsRedirection();
             app.UseMvc();
-
             // Set up enviroments
-            AutoMapperConfig.Configure();
+            //AutoMapperConfig.Configure();
             app.UseSwagger();
             app.UseSwaggerUI(x =>
             {

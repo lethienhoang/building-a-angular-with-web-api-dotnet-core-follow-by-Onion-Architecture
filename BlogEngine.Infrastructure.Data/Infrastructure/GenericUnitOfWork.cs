@@ -1,6 +1,8 @@
 ﻿using BlogEngine.Core;
 using BlogEngine.Core.Context;
 using BlogEngine.Core.Entities;
+using BlogEngine.Infrastructure.Data.Abstract;
+using BlogEngine.Infrastructure.Data.Abstracts;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,24 +10,24 @@ using System.Threading.Tasks;
 
 namespace BlogEngine.Infrastructure.Data.Infrastructure
 {
-    public class GenericUnitOfWork : IDisposable
+    public class GenericUnitOfWork : IDisposable, IBaseUnitOfWork
     {
-        private DatabaseContext context;
+        private BlogContext context;
         private bool disposed = false;
 
-        public GenericUnitOfWork(DatabaseContext context)
+        public GenericUnitOfWork(BlogContext context)
         {
             this.context = context;
         }
 
-        private GenericRepository<Post> postRepository;
-        private GenericRepository<Category> categoryRepository;
-        private GenericRepository<Comment> commentRepository;
-        private GenericRepository<User> userRepository;
+        private IEntityBaseRepository<Post> postRepository;
+        private IEntityBaseRepository<Category> categoryRepository;
+        private IEntityBaseRepository<Comment> commentRepository;
+        private IEntityBaseRepository<User> userRepository;
 
 
 
-        public GenericRepository<Post> PostRepository
+        public IEntityBaseRepository<Post> PostRepository
         {
             get
             {
@@ -39,7 +41,7 @@ namespace BlogEngine.Infrastructure.Data.Infrastructure
         }
 
 
-        public GenericRepository<Category> CategoryRepository
+        public IEntityBaseRepository<Category> CategoryRepository
         {
             get
             {
@@ -53,7 +55,7 @@ namespace BlogEngine.Infrastructure.Data.Infrastructure
         }
 
 
-        public GenericRepository<Comment> CommentRepository
+        public IEntityBaseRepository<Comment> CommentRepository
         {
             get
             {
@@ -67,7 +69,7 @@ namespace BlogEngine.Infrastructure.Data.Infrastructure
         }
 
 
-        public GenericRepository<User> UserRepository
+        public IEntityBaseRepository<User> UserRepository
         {
             get
             {

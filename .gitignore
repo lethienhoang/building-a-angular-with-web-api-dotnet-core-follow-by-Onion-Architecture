@@ -1,7 +1,13 @@
-
+BlogEngine.Http.Utilities/obj/
+BlogEngine.Dtos/obj/
+BlogEngine.Services/bin/
+BlogEngine.Services/obj/
+BlogEngine.Dtos/bin/
 BlogEngine.Core/obj/
 BlogEngine.Core/bin/
 BlogEngine.Http.Utilities/bin
 BlogEngine.WebApi/bin/
-BlogEngine.Infrastructure.Data/bin
+BlogEngine.WebApi/obj/
+BlogEngine.Infrastructure.Data/obj/
+BlogEngine.Infrastructure.Data/bin/
 BlogEngine.Services/bin/
